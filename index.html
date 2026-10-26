@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Centru de recuperare pentru câini și pisici: kinetoterapie și fizioterapie după operații, accidente sau la vârstă înaintată.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}html{scroll-behavior:smooth}</style>
+<title>Patru Pași Recuperare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: private-clinic calm. Deep forest bands framing porcelain pages, Bodoni display set large and light, brushed-brass as the single accent; hairlines instead of boxes, generous air */
+:root{
+  --bg:#F3F5F2; --surface:#FFFFFF; --surface-2:#E9EEEA;
+  --ink:#0D211E; --muted:#3E5048; --line:#D6DED9;
+  --forest:#0D211E; --forest-2:#15302B; --on-forest:#F3F6F2; --on-forest-muted:#C6D3CC; --forest-line:#2A4640;
+  --gold:#D4B06C; --gold-ink:#1A1508; --gold-text:#8A6A2E;
+  --good:#2F8A66;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --f-data:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --wrap:1200px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1614; --surface:#0F1F1C; --surface-2:#132723;
+  --ink:#E8EEE9; --muted:#BACAC2; --line:#22372F;
+  --forest:#06100E; --forest-2:#10231F; --on-forest:#E8EEE9; --on-forest-muted:#BFCDC6; --forest-line:#22372F;
+  --gold:#D9B774; --gold-ink:#1A1508; --gold-text:#D9B774; --good:#5CC79B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A1614; --surface:#0F1F1C; --surface-2:#132723;
+  --ink:#E8EEE9; --muted:#BACAC2; --line:#22372F;
+  --forest:#06100E; --forest-2:#10231F; --on-forest:#E8EEE9; --on-forest-muted:#BFCDC6; --forest-line:#22372F;
+  --gold:#D9B774; --gold-ink:#1A1508; --gold-text:#D9B774; --good:#5CC79B; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--forest)}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--gold-text)}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{display:flex;align-items:center;gap:12px;font:500 13px/1.2 var(--f-data);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.6}
+.data{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font:600 15px/1 var(--f-body);letter-spacing:.02em;padding:18px 28px;border-radius:2px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s ease,color .25s ease,border-color .25s ease}
+.btn .arr{transition:transform .25s ease}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-gold{background:var(--gold);color:var(--gold-ink)}
+.btn-gold:hover{background:color-mix(in oklab,var(--gold) 86%,#fff)}
+.btn-line{border-color:color-mix(in oklab,currentColor 40%,transparent);background:transparent;color:inherit}
+.btn-line:hover{border-color:currentColor}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in oklab,var(--forest) 94%,transparent);backdrop-filter:blur(12px);color:var(--on-forest);border-bottom:1px solid var(--forest-line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo .wm{font:400 24px/1 var(--f-display);letter-spacing:-.01em}
+.logo .wm i{color:var(--gold)}
+.nav{display:flex;gap:30px;font-size:14px;letter-spacing:.02em}
+.nav a{text-decoration:none;color:var(--on-forest-muted);transition:color .2s}
+.nav a:hover{color:var(--on-forest)}
+.top .btn{padding:12px 18px;font-size:14px}
+@media (max-width:900px){.nav{display:none}}
+@media (max-width:420px){.top .btn{display:none}}
+
+/* hero */
+.hero{background:var(--forest);color:var(--on-forest);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-12%;top:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,color-mix(in oklab,var(--gold) 16%,transparent),transparent);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:end;padding-block:96px 104px}
+.hero .eyebrow{color:var(--on-forest-muted);margin-bottom:28px}
+.hero h1{font-size:clamp(48px,7.4vw,108px)}
+.hero h1 em{color:var(--gold)}
+.hero .lead{font-size:19px;max-width:40ch;margin-top:30px;color:var(--on-forest-muted)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero .proof{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:48px;padding-top:24px;border-top:1px solid var(--forest-line);font-size:14px;color:var(--on-forest-muted)}
+.hero .proof span{display:flex;gap:10px;align-items:center}
+.hero .proof span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+.rec{background:color-mix(in oklab,var(--forest-2) 90%,transparent);border:1px solid var(--forest-line);padding:28px;min-width:0;position:relative}
+.rec::before{content:"";position:absolute;inset:-1px auto auto -1px;width:40px;height:40px;border-top:1px solid var(--gold);border-left:1px solid var(--gold)}
+.rec .head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding-bottom:18px;border-bottom:1px solid var(--forest-line)}
+.rec .no{font:500 13px/1.2 var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--on-forest-muted)}
+.rec .name{font:400 26px/1.1 var(--f-display);margin-top:8px}
+.rec .sub{font-size:14px;color:var(--on-forest-muted);margin-top:6px}
+.tag{font:500 12px/1 var(--f-data);text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border:1px solid currentColor;white-space:nowrap}
+.rom{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;margin-top:20px}
+.rom svg{width:128px;height:auto;max-width:100%}
+.rom dl{margin:0;display:grid;gap:12px}
+.rom dt{font-size:12px;letter-spacing:.04em;color:var(--on-forest-muted)}
+.rom dd{margin:2px 0 0;font:400 19px/1 var(--f-data)}
+.rom dd b{font-weight:500;color:var(--gold)}
+.chart{margin-top:22px}
+.chart svg{width:100%;height:auto;display:block}
+.chart-cap{display:flex;justify-content:space-between;gap:8px;font:400 12px/1.3 var(--f-data);color:var(--on-forest-muted);margin-top:8px}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr;gap:48px;padding-block:64px 72px}}
+
+/* reveal on load (visible at rest) */
+@media (prefers-reduced-motion:no-preference){
+  .rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+  .d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}.d4{animation-delay:.45s}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .bar{transform-box:fill-box;transform-origin:bottom;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) .5s both}
+  @keyframes grow{from{transform:scaleY(.1)}to{transform:scaleY(1)}}
+  .arc{stroke-dasharray:160;animation:draw 1.6s cubic-bezier(.2,.8,.2,1) .5s both}
+  @keyframes draw{from{stroke-dashoffset:160}to{stroke-dashoffset:0}}
+}
+
+/* sections */
+section{padding-block:128px}
+.sec-head{display:grid;gap:22px;max-width:60ch;margin-bottom:64px}
+.sec-head h2{font-size:clamp(38px,5vw,66px)}
+.sec-head p{color:var(--muted);font-size:18px;max-width:52ch}
+@media (max-width:700px){section{padding-block:88px}.sec-head{margin-bottom:44px}}
+
+/* figures */
+.figs{background:var(--surface);border-bottom:1px solid var(--line)}
+.figs .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.figs div{padding:40px 28px 40px 0;display:grid;gap:8px;border-right:1px solid var(--line);padding-left:28px}
+.figs div:first-child{padding-left:0}
+.figs div:last-child{border-right:0}
+.figs strong{font:400 44px/1 var(--f-display);letter-spacing:-.02em}
+.figs strong small{font-size:.5em;color:var(--muted);margin-left:4px}
+.figs span{font-size:14px;color:var(--muted);max-width:22ch}
+@media (max-width:800px){.figs .wrap{grid-template-columns:1fr 1fr}.figs div{padding:28px 16px;border-bottom:1px solid var(--line)}.figs div:nth-child(2n){border-right:0}.figs div:nth-child(odd){padding-left:0}}
+
+/* conditions */
+.conds{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.cond{padding:32px 28px 36px 0;border-bottom:1px solid var(--line);display:grid;gap:10px;align-content:start;transition:background .3s}
+.cond h3{font-size:25px;line-height:1.1}
+.cond p{font-size:15px;color:var(--muted)}
+.cond .who{font:500 13px/1.2 var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text)}
+@media (max-width:1000px){.conds{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.conds{grid-template-columns:1fr}}
+
+/* statement */
+.statement{background:var(--surface-2);padding-block:120px}
+.statement blockquote{margin:0;font:400 clamp(32px,4.6vw,60px)/1.12 var(--f-display);letter-spacing:-.015em;max-width:22ch;text-wrap:balance}
+.statement blockquote em{color:var(--gold-text)}
+.statement .by{margin-top:32px}
+
+/* finder */
+.finder .box{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.group-label{font:500 13px/1.2 var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font:500 15px/1 var(--f-body);padding:14px 18px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;border-radius:2px;transition:border-color .2s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.species{display:flex;gap:10px;margin-bottom:36px}
+.result{background:var(--forest);color:var(--on-forest);padding:40px;display:grid;gap:18px;min-width:0}
+.result .eyebrow{color:var(--on-forest-muted)}
+.result h3{font-size:clamp(30px,3.4vw,42px)}
+.result ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;border-top:1px solid var(--forest-line);padding-top:18px}
+.result li{display:flex;gap:14px;color:var(--on-forest-muted)}
+.result li::before{content:"—";color:var(--gold)}
+.result .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--gold)}
+.result .btn{justify-self:start;margin-top:8px}
+@media (max-width:900px){.finder .box{grid-template-columns:1fr;gap:36px}.result{padding:28px}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.svc article{display:grid;gap:18px;align-content:start;border-top:1px solid var(--ink);padding-top:28px}
+.svc .kicker{font:500 13px/1.2 var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.svc h3{font-size:38px}
+.svc p{color:var(--muted)}
+.svc ul{margin:0;padding:0;list-style:none;display:grid;font-size:15px}
+.svc li{padding-block:11px;border-bottom:1px solid var(--line)}
+.svc .soon{border-top-color:var(--gold)}
+.svc .soon .kicker{color:var(--gold-text)}
+@media (max-width:900px){.svc{grid-template-columns:1fr;gap:56px}}
+
+/* process */
+.process{background:var(--surface)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.step{padding:28px 24px 0 0;display:grid;gap:12px;align-content:start;position:relative}
+.step::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.step .n{font:500 13px/1.2 var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text)}
+.step h3{font-size:27px}
+.step p{font-size:15px;color:var(--muted)}
+@media (max-width:900px){.steps{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line)}.step{padding:0 0 36px 28px}.step::before{top:4px;left:-4px}}
+
+/* pricing */
+.pricing{background:var(--forest);color:var(--on-forest)}
+.pricing .eyebrow,.pricing .sec-head p{color:var(--on-forest-muted)}
+.pricing h2 em{color:var(--gold)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--forest-line)}
+.plan{padding:44px 36px;display:grid;gap:20px;grid-template-rows:auto auto auto 1fr auto;border-right:1px solid var(--forest-line);position:relative}
+.plan:last-child{border-right:0}
+.plan.hot{background:var(--forest-2);outline:1px solid var(--gold);outline-offset:-1px}
+.plan .ribbon{position:absolute;top:-1px;left:36px;transform:translateY(-50%);background:var(--gold);color:var(--gold-ink);font:500 12px/1 var(--f-data);letter-spacing:.08em;text-transform:uppercase;padding:8px 12px}
+.plan h3{font-size:32px}
+.price{display:flex;align-items:baseline;gap:10px}
+.price b{font:400 64px/1 var(--f-display);letter-spacing:-.03em}
+.price span{font-size:14px;color:var(--on-forest-muted)}
+.plan .per{font:400 14px/1.5 var(--f-body);color:var(--on-forest-muted)}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;font-size:15px}
+.plan li{padding-block:10px;border-top:1px solid var(--forest-line);color:color-mix(in oklab,var(--on-forest) 88%,transparent)}
+.fine{margin-top:32px;font-size:14px;color:var(--on-forest-muted);max-width:80ch}
+@media (max-width:960px){.plans{grid-template-columns:1fr}.plan{border-right:0;border-bottom:1px solid var(--forest-line)}.plan:last-child{border-bottom:0}.plan.hot{margin-block:14px}}
+
+/* vets + faq */
+.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px}
+@media (max-width:900px){.two{grid-template-columns:1fr;gap:56px}}
+.vets{display:grid;gap:22px;align-content:start}
+.vets h2{font-size:clamp(34px,4vw,50px)}
+.vets p{color:var(--muted)}
+.vets .btn{justify-self:start}
+.faq{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);padding-block:24px}
+summary{cursor:pointer;font:600 19px/1.35 var(--f-body);list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:300 24px/1 var(--f-body);color:var(--gold-text);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px;color:var(--muted);max-width:60ch}
+
+/* booking */
+.book{background:var(--surface-2)}
+.book .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+@media (max-width:960px){.book .wrap{grid-template-columns:1fr;gap:48px}}
+.contact{display:grid;gap:26px}
+.contact h2{font-size:clamp(40px,5vw,66px)}
+.contact > p{color:var(--muted);font-size:18px;max-width:40ch}
+.lines{display:grid;border-top:1px solid var(--line)}
+.line{display:grid;gap:4px;padding-block:18px;border-bottom:1px solid var(--line)}
+.line span.k{font:500 13px/1.2 var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.line b{font:600 20px/1.3 var(--f-body);display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.copy{font:500 12px/1 var(--f-body);letter-spacing:.04em;padding:8px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;border-radius:2px}
+form{background:var(--surface);padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:24px 20px;box-shadow:0 40px 80px -40px color-mix(in oklab,var(--forest) 45%,transparent)}
+.form-title{grid-column:1/-1;font:400 28px/1.1 var(--f-display)}
+.f{display:grid;gap:8px;min-width:0}
+.f.full{grid-column:1/-1}
+label{font:500 13px/1.2 var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:17px;padding:10px 0 12px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);width:100%;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--gold)}
+select option{background:var(--surface);color:var(--ink)}
+textarea{min-height:88px;resize:vertical}
+form .btn{grid-column:1/-1;margin-top:8px}
+.ok{grid-column:1/-1;border-left:2px solid var(--good);background:color-mix(in oklab,var(--good) 9%,var(--surface));padding:14px 18px;font-size:15px}
+@media (max-width:600px){form{grid-template-columns:1fr;padding:28px 20px}}
+
+footer{background:var(--forest);color:var(--on-forest-muted);font-size:14px;padding-block:56px calc(56px + 76px)}
+footer .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+footer .wm{font:400 40px/1 var(--f-display);color:var(--on-forest)}
+footer .wm i{color:var(--gold)}
+@media (min-width:761px){footer{padding-block:56px}}
+@media (max-width:700px){footer .wrap{grid-template-columns:1fr}}
+
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:var(--forest);color:var(--on-forest);border-top:1px solid var(--forest-line)}
+.dock .btn{flex:1;padding:15px}
+@media (max-width:760px){.dock{display:flex}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Patru Pași, acasă">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13.5" fill="none" stroke="var(--gold)"/><circle cx="9" cy="10.5" r="2" fill="var(--gold)"/><circle cx="14" cy="8.2" r="2" fill="var(--gold)"/><circle cx="19" cy="10.5" r="2" fill="var(--gold)"/><ellipse cx="14" cy="17.6" rx="4.6" ry="3.8" fill="var(--gold)"/></svg>
+      <span class="wm">Patru <i>Pași</i></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#afectiuni">Afecțiuni</a>
+      <a href="#servicii">Terapii</a>
+      <a href="#cum">Cum lucrăm</a>
+      <a href="#preturi">Prețuri</a>
+      <a href="#medici">Medici veterinari</a>
+    </nav>
+    <a class="btn btn-gold" href="#programare">Programare</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-block:0">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow rise">Centru de recuperare · câini și pisici</p>
+      <h1 class="rise d1">Înapoi pe <em>patru</em> picioare.</h1>
+      <p class="lead rise d2">Kinetoterapie și fizioterapie după operații, accidente sau la vârstă înaintată. Fiecare ședință cu același terapeut, fiecare progres măsurat și pus în scris.</p>
+      <div class="ctas rise d3">
+        <a class="btn btn-gold" href="#programare">Programează evaluarea <span class="arr">→</span></a>
+        <a class="btn btn-line" href="#potrivire">Găsește programul potrivit</a>
+      </div>
+      <div class="proof rise d4">
+        <span>În colaborare cu medicul veterinar</span>
+        <span>Plan scris, cost cunoscut dinainte</span>
+        <span>Sală separată pentru pisici</span>
+      </div>
+    </div>
+
+    <aside class="rec rise d3" aria-label="Exemplu de fișă de recuperare">
+      <div class="head">
+        <div>
+          <div class="no">Fișă de recuperare · exemplu</div>
+          <div class="name">Luna, Labrador, 6 ani</div>
+          <div class="sub">După TPLO, membrul posterior stâng</div>
+        </div>
+        <span class="tag">Săpt. 8</span>
+      </div>
+      <div class="rom">
+        <svg viewBox="0 0 128 76" role="img" aria-label="Flexia genunchiului a crescut de la 42 la 118 grade">
+          <path d="M8 68 A56 56 0 0 1 120 68" fill="none" stroke="var(--forest-line)" stroke-width="2"/>
+          <path class="arc" d="M8 68 A56 56 0 0 1 99 36" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="99" cy="36" r="4" fill="var(--gold)"/>
+          <circle cx="29" cy="26" r="3" fill="none" stroke="var(--on-forest-muted)"/>
+          <text x="64" y="66" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-weight="600" font-size="24" fill="var(--on-forest)">118°</text>
+        </svg>
+        <dl>
+          <div><dt>Flexie genunchi</dt><dd class="data">42° → <b>118°</b></dd></div>
+          <div><dt>Sprijin pe membru</dt><dd class="data">20% → <b>92%</b></dd></div>
+        </dl>
+      </div>
+      <div class="chart">
+        <svg viewBox="0 0 300 88" role="img" aria-label="Sprijin pe membru pe 8 săptămâni: 20, 34, 48, 61, 70, 79, 87, 92 la sută">
+          <line x1="0" y1="80" x2="300" y2="80" stroke="var(--forest-line)"/>
+          <line x1="0" y1="8" x2="300" y2="8" stroke="var(--forest-line)" stroke-dasharray="2 4"/>
+          <g fill="var(--on-forest-muted)" opacity=".7">
+            <rect class="bar" x="10"  y="65.6" width="18" height="14.4"/>
+            <rect class="bar" x="47"  y="55.5" width="18" height="24.5"/>
+            <rect class="bar" x="84"  y="45.4" width="18" height="34.6"/>
+            <rect class="bar" x="121" y="36.1" width="18" height="43.9"/>
+            <rect class="bar" x="158" y="29.6" width="18" height="50.4"/>
+            <rect class="bar" x="195" y="23.1" width="18" height="56.9"/>
+            <rect class="bar" x="232" y="17.4" width="18" height="62.6"/>
+          </g>
+          <rect class="bar" x="269" y="13.8" width="18" height="66.2" fill="var(--gold)"/>
+        </svg>
+        <div class="chart-cap"><span>S1</span><span>Sprijin pe membru, % · linia punctată = 100%</span><span>S8</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="figs">
+  <div class="wrap">
+    <div><strong class="data" style="font-family:var(--f-display)">60<small>min</small></strong><span>durează prima evaluare, nu 15</span></div>
+    <div><strong>1</strong><span>terapeut, de la prima la ultima ședință</span></div>
+    <div><strong>3</strong><span>măsurători la fiecare reevaluare: unghi, sprijin, masă musculară</span></div>
+    <div><strong>0</strong><span>costuri ascunse: totalul îl afli în planul scris</span></div>
+  </div>
+</div>
+
+<section id="afectiuni">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Cu ce venim în ajutor</p>
+      <h2>Primele săptămâni după o operație <em>contează</em> cel mai mult.</h2>
+      <p>Cu cât începe mai devreme recuperarea, cu atât se pierde mai puțină masă musculară și mersul revine mai corect.</p>
+    </div>
+    <div class="conds">
+      <div class="cond"><span class="who">Câini</span><h3>După operații ortopedice</h3><p>TPLO, TTA, fracturi, luxație de rotulă, protezare de șold.</p></div>
+      <div class="cond"><span class="who">Câini · Pisici</span><h3>Hernie de disc</h3><p>Operată sau tratată conservator, cu pareză sau paralizie.</p></div>
+      <div class="cond"><span class="who">Câini · Pisici</span><h3>Artroză și displazie</h3><p>Mai puțină durere, mai multă mișcare, fără să forțăm articulația.</p></div>
+      <div class="cond"><span class="who">Seniori</span><h3>Animale în vârstă</h3><p>Ridicat de jos, urcat scări, plimbări mai lungi.</p></div>
+      <div class="cond"><span class="who">Neurologic</span><h3>Afecțiuni neurologice</h3><p>Mielopatie degenerativă, sindrom vestibular, traumatisme.</p></div>
+      <div class="cond"><span class="who">Sport</span><h3>Câini sportivi și de lucru</h3><p>Agility, canicross, câini de pază. Prevenție și revenire.</p></div>
+      <div class="cond"><span class="who">Greutate</span><h3>Supraponderalitate</h3><p>Exerciții dozate, care protejează articulațiile.</p></div>
+      <div class="cond"><span class="who">Pisici</span><h3>Pisici după traumatisme</h3><p>Căzături de la etaj, fracturi de bazin. Ritm fără stres.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="statement">
+  <div class="wrap">
+    <blockquote>Nu grăbim recuperarea. O <em>măsurăm</em>, săptămână de săptămână, și ți-o arătăm.</blockquote>
+    <p class="eyebrow by">Promisiunea Patru Pași</p>
+  </div>
+</div>
+
+<section class="finder" id="potrivire">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">În zece secunde</p>
+      <h2>Ce program i se <em>potrivește</em>?</h2>
+      <p>Alege animalul și situația. Îți arătăm de unde pornim; planul final îl stabilim împreună la evaluare.</p>
+    </div>
+    <div class="box">
+      <div>
+        <p class="group-label">Animalul</p>
+        <div class="species" role="group" aria-label="Animal">
+          <button type="button" class="chip" id="sp-dog" data-sp="câine" aria-pressed="true">Câine</button>
+          <button type="button" class="chip" id="sp-cat" data-sp="pisică" aria-pressed="false">Pisică</button>
+        </div>
+        <p class="group-label">Situația</p>
+        <div class="chips" role="group" aria-label="Situația" id="situations"></div>
+      </div>
+      <div class="result" aria-live="polite" id="result"></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Terapii</p>
+      <h2>Mișcare ghidată, susținută de <em>aparatură</em>.</h2>
+      <p>Exercițiul face recuperarea. Fizioterapia reduce durerea și inflamația, ca exercițiul să fie posibil.</p>
+    </div>
+    <div class="svc">
+      <article>
+        <span class="kicker">Baza oricărui plan</span>
+        <h3>Kinetoterapie</h3>
+        <p>Exerciții alese pentru animalul tău și crescute treptat, săptămână de săptămână.</p>
+        <ul>
+          <li>Mobilizări pasive și stretching</li>
+          <li>Echilibru și propriocepție: discuri, cavaletti</li>
+          <li>Întărire musculară cu încărcare controlată</li>
+          <li>Reeducarea mersului</li>
+        </ul>
+      </article>
+      <article>
+        <span class="kicker">Durere · inflamație</span>
+        <h3>Fizioterapie</h3>
+        <p>Aparatură folosită doar acolo unde ajută, cu parametrii notați în fișă.</p>
+        <ul>
+          <li>Laserterapie</li>
+          <li>Electrostimulare TENS / NMES</li>
+          <li>Ultrasunete terapeutice</li>
+          <li>Magnetoterapie</li>
+          <li>Termoterapie și crioterapie</li>
+        </ul>
+      </article>
+      <article class="soon">
+        <span class="kicker">În curând</span>
+        <h3>Osteopatie veterinară</h3>
+        <p>Terapeuții noștri sunt acum în formare în osteopatie pentru animale. Vom oferi ședințe doar după încheierea pregătirii.</p>
+        <ul>
+          <li>Înscrie-te pe lista de așteptare</li>
+          <li>Clienții cu pachet au prioritate</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="cum">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Cum lucrăm</p>
+      <h2>Știi mereu unde suntem și <em>ce urmează</em>.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">Pas 1</span><h3>Evaluare</h3><p>60 de minute: istoric, mers filmat, unghiuri articulare, test de durere. Citim scrisoarea medicului.</p></div>
+      <div class="step"><span class="n">Pas 2</span><h3>Plan scris</h3><p>Obiective la 2, 4 și 8 săptămâni, număr estimat de ședințe, cost total.</p></div>
+      <div class="step"><span class="n">Pas 3</span><h3>Ședințe</h3><p>45 de minute, cu același terapeut. Poți rămâne lângă animal.</p></div>
+      <div class="step"><span class="n">Pas 4</span><h3>Acasă</h3><p>3–4 exerciții simple, cu video, ca progresul să continue între ședințe.</p></div>
+      <div class="step"><span class="n">Pas 5</span><h3>Reevaluare</h3><p>Măsurăm din nou și trimitem raportul ție și medicului veterinar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="preturi">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Prețuri</p>
+      <h2>Prețul îl știi <em>de la început</em>.</h2>
+      <p>Majoritatea recuperărilor după operație au nevoie de 8–12 ședințe. Pachetul păstrează ritmul și costă mai puțin.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>Evaluare</h3>
+        <div class="price"><b class="data" style="font-family:var(--f-display)">250</b><span>lei</span></div>
+        <div class="per">60 min · o singură dată</div>
+        <ul>
+          <li>Examinare completă și măsurători</li>
+          <li>Plan scris, cu obiective și cost</li>
+          <li>Primele exerciții pentru acasă</li>
+        </ul>
+        <a class="btn btn-line" href="#programare" data-plan="Evaluare">Programează</a>
+      </div>
+      <div class="plan hot">
+        <span class="ribbon">Cel mai ales</span>
+        <h3>Recuperare 10</h3>
+        <div class="price"><b style="font-family:var(--f-display)">1.650</b><span>lei</span></div>
+        <div class="per">10 ședințe × 45 min · 165 lei/ședință în loc de 200</div>
+        <ul>
+          <li>Evaluarea inițială inclusă</li>
+          <li>Kinetoterapie și fizioterapie la fiecare ședință</li>
+          <li>Reevaluare la ședințele 5 și 10, cu raport</li>
+          <li>Program pentru acasă, cu video</li>
+          <li>Întrebări pe WhatsApp între ședințe</li>
+        </ul>
+        <a class="btn btn-gold" href="#programare" data-plan="Recuperare 10">Începe recuperarea <span class="arr">→</span></a>
+      </div>
+      <div class="plan">
+        <h3>Senior în mișcare</h3>
+        <div class="price"><b style="font-family:var(--f-display)">640</b><span>lei / lună</span></div>
+        <div class="per">4 ședințe pe lună · fără contract</div>
+        <ul>
+          <li>Pentru artroză și animale în vârstă</li>
+          <li>Reevaluare lunară a mobilității</li>
+          <li>Exercițiile de acasă, ajustate lunar</li>
+        </ul>
+        <a class="btn btn-line" href="#programare" data-plan="Senior în mișcare">Alege abonamentul</a>
+      </div>
+    </div>
+    <p class="fine">Ședință individuală: 200 lei. Prețurile includ TVA. Dacă după evaluare considerăm că recuperarea nu e potrivită acum, îți spunem direct și plătești doar evaluarea.</p>
+  </div>
+</section>
+
+<section id="medici">
+  <div class="wrap two">
+    <div class="vets">
+      <p class="eyebrow">Pentru medici veterinari</p>
+      <h2>Trimiteți-ne pacientul. <em>Primiți raportul.</em></h2>
+      <p>Respectăm restricțiile post-operatorii din scrisoarea dumneavoastră și nu modificăm medicația. Primiți raport scris la fiecare reevaluare, iar dacă observăm ceva ce trebuie văzut de medic, vă sunăm.</p>
+      <a class="btn btn-line" href="#programare" data-plan="Recomandare de la medic veterinar">Trimite o recomandare</a>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:22px">Întrebări frecvente</p>
+      <div class="faq">
+        <details open><summary>Am nevoie de trimitere de la medic?</summary><p>Nu e obligatorie, dar o recomandăm. După operații lucrăm doar cu acordul medicului care a operat, ca să respectăm restricțiile.</p></details>
+        <details><summary>Cât de repede după operație putem începe?</summary><p>De obicei din primele 1–2 săptămâni, cu exerciții blânde. Momentul exact îl stabilește medicul chirurg.</p></details>
+        <details><summary>Câte ședințe sunt necesare?</summary><p>După o operație ortopedică, în medie 8–12. La artroză, 4 ședințe pe lună, pe termen lung. Numărul exact îl afli în planul scris de după evaluare.</p></details>
+        <details><summary>Pisica mea se stresează în locuri noi.</summary><p>Avem sală separată pentru pisici, fără câini în așteptare, și programări fără suprapuneri. Prima ședință e mai scurtă, ca să se obișnuiască.</p></details>
+        <details><summary>Când oferiți osteopatie?</summary><p>După ce terapeuții noștri își încheie formarea. Înscrie-te pe lista de așteptare și te anunțăm.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="programare">
+  <div class="wrap">
+    <div class="contact">
+      <p class="eyebrow">Programare</p>
+      <h2>Primul pas este <em>evaluarea</em>.</h2>
+      <p>Lasă-ne datele și te sunăm în aceeași zi lucrătoare cu o oră disponibilă.</p>
+      <div class="lines">
+        <div class="line"><span class="k">Telefon</span><b><span class="data" id="phone">0722 000 000</span><button type="button" class="copy" data-copy="phone">Copiază</button></b></div>
+        <div class="line"><span class="k">Program</span><b>Luni–Vineri 9–20 · Sâmbătă 9–14</b></div>
+        <div class="line"><span class="k">Adresă</span><b>Str. Exemplu 12, București</b></div>
+      </div>
+    </div>
+    <form id="bookForm" novalidate>
+      <p class="form-title">Cerere de programare</p>
+      <div class="f"><label for="owner">Numele tău</label><input id="owner" name="owner" autocomplete="name" required></div>
+      <div class="f"><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+      <div class="f"><label for="pet">Numele animalului</label><input id="pet" name="pet" required></div>
+      <div class="f"><label for="kind">Animal</label><select id="kind" name="kind"><option>Câine</option><option>Pisică</option></select></div>
+      <div class="f full"><label for="plan">Interesat de</label><select id="plan" name="plan"><option>Evaluare</option><option>Recuperare 10</option><option>Senior în mișcare</option><option>Osteopatie (listă de așteptare)</option><option>Recomandare de la medic veterinar</option></select></div>
+      <div class="f full"><label for="msg">Ce s-a întâmplat? (opțional)</label><textarea id="msg" name="msg" placeholder="Ex.: operat de ligament încrucișat acum 10 zile, nu calcă pe piciorul stâng"></textarea></div>
+      <button class="btn btn-gold" type="submit">Cere o programare <span class="arr">→</span></button>
+      <div class="ok" id="ok" hidden></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="wm">Patru <i>Pași</i></div>
+      <p style="margin-top:12px">Centru de recuperare pentru câini și pisici. Lucrăm împreună cu medicul veterinar al animalului tău.</p>
+    </div>
+    <span>© 2026 Patru Pași</span>
+  </div>
+</footer>
+
+<div class="dock" aria-label="Acțiuni rapide">
+  <a class="btn btn-line" href="#potrivire">Ce program?</a>
+  <a class="btn btn-gold" href="#programare">Programare</a>
+</div>
+
+<script>
+(function(){
+  var data = {
+    "câine": [
+      {k:"op", label:"Operat recent", t:"Recuperare post-operatorie", d:"8–12 ședințe · 2 pe săpt.", plan:"Recuperare 10", items:["Mobilizări blânde din prima săptămână, cu acordul chirurgului","Laser și crioterapie pentru durere și umflătură","Reîncărcarea treptată a membrului operat"]},
+      {k:"disc", label:"Hernie de disc", t:"Recuperare neurologică", d:"10–15 ședințe · 2–3 pe săpt.", plan:"Recuperare 10", items:["Electrostimulare pentru mușchii care nu răspund","Exerciții de echilibru și reeducarea pașilor","Sfaturi pentru casă: covoare, rampe, ham"]},
+      {k:"senior", label:"Bătrân, se mișcă greu", t:"Senior în mișcare", d:"4 ședințe pe lună", plan:"Senior în mișcare", items:["Întărirea musculaturii posterioare","Laser și magnetoterapie pentru articulații","Exerciții scurte, de făcut zilnic acasă"]},
+      {k:"limp", label:"Șchiopătează", t:"Evaluare de mers", d:"1 ședință · 60 min", plan:"Evaluare", items:["Analiza mersului filmat","Măsurarea unghiurilor și a masei musculare","Îți spunem dacă e nevoie întâi de medic"]},
+      {k:"sport", label:"Câine sportiv", t:"Performanță și prevenție", d:"pachet stabilit după evaluare", plan:"Evaluare", items:["Test de forță și simetrie","Program de încălzire și condiționare","Revenire la sport după accidentare"]}
+    ],
+    "pisică": [
+      {k:"op", label:"Operată recent", t:"Recuperare post-operatorie", d:"6–10 ședințe · 1–2 pe săpt.", plan:"Recuperare 10", items:["Ședințe scurte, în sala fără câini","Laser pentru vindecare și durere","Joacă terapeutică în loc de exerciții forțate"]},
+      {k:"fall", label:"A căzut de la etaj", t:"Recuperare după traumatism", d:"8–12 ședințe", plan:"Recuperare 10", items:["Reluarea sprijinului pe membre","Exerciții de sărit, crescute treptat","Coordonare cu medicul care a tratat fracturile"]},
+      {k:"senior", label:"Bătrână, nu mai sare", t:"Mobilitate pentru pisici senior", d:"4 ședințe pe lună", plan:"Senior în mișcare", items:["Calmarea durerii articulare","Exerciții prin joacă","Amenajarea casei: trepte, litieră joasă"]},
+      {k:"disc", label:"Slăbiciune pe picioare", t:"Evaluare neurologică funcțională", d:"1 ședință · 60 min", plan:"Evaluare", items:["Teste de reflexe și propriocepție","Plan de exerciții adaptat","Raport pentru medicul veterinar"]}
+    ]
+  };
+  var sp = "câine", sel = "op";
+  var sitEl = document.getElementById("situations"), resEl = document.getElementById("result");
+
+  function renderChips(){
+    sitEl.innerHTML = "";
+    data[sp].forEach(function(s){
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "chip"; b.textContent = s.label;
+      b.setAttribute("aria-pressed", String(s.k === sel));
+      b.addEventListener("click", function(){ sel = s.k; renderChips(); renderResult(); });
+      sitEl.appendChild(b);
+    });
+  }
+  function current(){ return data[sp].find(function(s){return s.k===sel;}) || data[sp][0]; }
+  function renderResult(){
+    var s = current();
+    resEl.innerHTML =
+      '<p class="eyebrow">Recomandare pentru ' + sp + '</p>' +
+      '<h3>' + s.t + '</h3>' +
+      '<div class="meta"><span class="tag">' + s.d + '</span><span class="tag">' + s.plan + '</span></div>' +
+      '<ul>' + s.items.map(function(i){return '<li>'+i+'</li>';}).join('') + '</ul>' +
+      '<a class="btn btn-gold" href="#programare" data-plan="' + s.plan + '">Programează evaluarea <span class="arr">→</span></a>';
+    bindPlanLinks(resEl);
+  }
+  document.querySelectorAll("[data-sp]").forEach(function(b){
+    b.addEventListener("click", function(){
+      sp = b.dataset.sp;
+      document.querySelectorAll("[data-sp]").forEach(function(x){ x.setAttribute("aria-pressed", String(x===b)); });
+      if(!data[sp].some(function(s){return s.k===sel;})) sel = data[sp][0].k;
+      document.getElementById("kind").value = sp === "câine" ? "Câine" : "Pisică";
+      renderChips(); renderResult();
+    });
+  });
+
+  function bindPlanLinks(root){
+    root.querySelectorAll("[data-plan]").forEach(function(a){
+      a.addEventListener("click", function(){ document.getElementById("plan").value = a.dataset.plan; });
+    });
+  }
+  bindPlanLinks(document);
+  renderChips(); renderResult();
+
+  document.querySelectorAll("[data-copy]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var el = document.getElementById(btn.dataset.copy), txt = el.textContent;
+      function done(){ btn.textContent = "Copiat"; setTimeout(function(){ btn.textContent = "Copiază"; }, 1600); }
+      try {
+        navigator.clipboard.writeText(txt).then(done, function(){ selectText(el); });
+      } catch(e){ selectText(el); }
+    });
+  });
+  function selectText(el){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+  var form = document.getElementById("bookForm"), ok = document.getElementById("ok");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var missing = ["owner","tel","pet"].filter(function(id){ return !document.getElementById(id).value.trim(); });
+    ok.hidden = false;
+    if(missing.length){
+      ok.textContent = "Completează numele tău, telefonul și numele animalului, ca să te putem suna.";
+      document.getElementById(missing[0]).focus();
+      return;
+    }
+    ok.textContent = "Mulțumim, " + document.getElementById("owner").value.trim() + "! Cererea pentru " + document.getElementById("pet").value.trim() + " este pregătită. (Versiune demonstrativă: formularul nu trimite încă datele.)";
+  });
+})();
+</script>
+</body>
+</html>
